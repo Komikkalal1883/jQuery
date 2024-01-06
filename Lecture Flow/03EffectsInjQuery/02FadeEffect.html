@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade Effect in jQuery</title>
+  </head>
+  <body>
+    <h1>Fade Effect in jQuery</h1>
+    
+    <div class="wrapper">
+        <button class="btnFadeIn">Fade In</button>
+        <button class="btnFadeOut">Fade Out</button>
+        <button class="btnFadeToggle">Fade Toggle</button>
+        <button class="btnFadeTo">Fade To</button>
+    </div>
+    <div class="box">This is Box</div>
+
+    <!-- jquery is added here  -->
+
+    <script src="/jquery-3.7.1.min.js"></script>
+
+    <!-- script  -->
+
+    <script>
+          $("*").css({
+        padding: "0px",
+        margin: "0px ",
+        boxSizing: 'border-box'
+      });
+      $("body").css({
+        backgroundColor: "tan",
+        color: "khaki",
+        fontSize: "30px",
+      });
+      $("h1").css({
+        color: "brown",  
+        fontSize: "50px",
+      });
+
+      $(".box").css({
+        width: "150px",
+        height: "150px",
+        margin: 'auto',
+        border: "1px solid black",
+        backgroundColor: "brown",
+        color: "khaki",
+        fontSize: "30px",
+      });
+      $(".wrapper").css({
+        textAlign: 'center'
+
+      });
+      $("button").css({
+        padding: "10px 30px",
+        margin: "10px ",
+        border: "1px solid black",
+        backgroundColor: "crimson",
+        color: "khaki",
+        fontSize: "30px",
+      });
+
+
+
+
+    </script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.btnFadeIn').click(function () {
+            $('.box').fadeIn(5000)
+        })
+        $('.btnFadeOut').click(function () {
+            $('.box').fadeOut(3000)
+        })
+        $('.btnFadeToggle').click(function () {
+            $('.box').fadeToggle(2000)
+            // $('.box').fadeToggle("slow", "linear" )
+        })
+        $('.btnFadeTo').click(function () {
+            $('.box').fadeTo(3000, 0.5)
+        })
+    })
+</script>
+  </body>
+</html>

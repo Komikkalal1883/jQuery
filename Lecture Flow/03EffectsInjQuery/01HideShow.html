@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector In jQuery</title>
+    <style>
+      .box {
+        background-color: cadetblue;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selector In jQuery</h1>
+    <div class="box"></div>
+    <button class="btnHide">Hide</button>
+    <button class="btnShow">Show</button>
+    <button class="btnToggle">Toggle</button>
+
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Hide
+
+        $(".btnHide").click(function () {
+          $(".box").hide();
+          console.log("Box is hide");
+        });
+
+        // Show
+
+        $(".btnShow").click(function () {
+          $(".box").show();
+          console.log("Box is Show");
+        });
+
+        // Toggle
+
+        $(".btnToggle").click(function () {
+          $(".box").toggle();
+          console.log("Box is Toggle");
+        });
+      });
+    </script>
+  </body>
+</html>

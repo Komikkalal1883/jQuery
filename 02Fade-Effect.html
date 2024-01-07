@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Effect in jQuery</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Fade Effect in jQuery.</h1>
+    <div class="main">
+        <button class="fadeIn">FadeIn</button>
+        <button class="fadeToggle">FadeToggle</button>
+        <button class="fadeOut">FadeOut</button>
+        <button class="fadeopaout">FadeOpacityOut</button>
+        <button class="fadeopain">FadeOpacityIn</button>
+    </div>
+    <div class="box">Magic Box</div>
+</body>
+<script>
+    $("*").css({
+        margin: "0",
+        padding: "0",
+        boxsize: "border-box",
+    });
+    $("body").css({
+        backgroundColor: "tan"
+    });
+    $("h1").css({
+        marginTop:"10px",
+        padding:"10px",
+        backgroundColor: "brown",
+        textAlign: "center",
+        color:"white"
+    });
+    $(".box").css({
+        fontSize: "25px",
+        color:"white",
+        textAlign: "center",
+        margin: "0 auto",
+        height: "250px",
+        width: "250px",
+        border: "1px solid black",
+        backgroundColor: "brown",
+    });
+    $(".main").css({
+        marginTop:"30px",
+        marginBottom:"30px",
+        textAlign: "center"
+    });
+    $("button").css({
+        height:"50px",
+        width:"130px",
+        backgroundColor:"crimson",
+        color: "white",
+        fontSize: "15px",
+        fontWeight:"600",
+        border:"none",
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $(".fadeIn").click(function(){
+            $(".box").fadeIn(2000)
+        });
+        $(".fadeOut").click(function(){
+            $(".box").fadeOut(2000)
+        });
+        $(".fadeToggle").click(function(){
+            $(".box").fadeToggle(1000)
+        });
+        $(".fadeopaout").click(function(){
+            $(".box").fadeTo(1000,0.2)
+        });
+    });
+    $(".fadeopain").click(function(){
+        $(".box").fadeTo(1000,0.9)
+    });
+
+</script>
+</html>

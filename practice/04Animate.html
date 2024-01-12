@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate in JQuery</title>
+    <script src="../main/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Animate in JQuery</h1>
+    <div class="buttondiv">
+      <button class="button">Animate</button>
+    </div>
+    <div class="box">
+      This is the Magic of JQuery. Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Laudantium iure obcaecati, explicabo magni inventore
+      consequuntur saepe error quidem laborum vero. Dolorum quae nihil eaque ab,
+      quas rem ipsam asperiores libero.
+    </div>
+  </body>
+  <script>
+    $("*").css({
+      margin: "0",
+      padding: "0",
+      boxSizing: "borderBox",
+    });
+    $("body").css({
+      background: "tan",
+    });
+    $("h1").css({
+      marginTop: "10px",
+      textAlign: "center",
+      fontSize: "45px ",
+      color: "crimson ",
+    });
+    $(".box").css({
+      height: "400px",
+      width: "300px",
+      border: "2px solid black",
+      background: "brown",
+      fontSize: "25px ",
+      color: "white",
+      overFlow: "scroll",
+    });
+    $(".buttondiv").css({
+        textAlign: "center",
+        marginTop: "20px"
+    });
+    $("button").css({
+      height: "40px",
+      width: "100px",
+      fontSize: "20px",
+      fontWeight: "600",
+      borderRadius: "10px",
+      background: "grey",
+      color: "white",
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".button").click(function () {
+        $(".box").animate(
+          {
+            marginLeft: "400px",
+            height: "200px",
+          },
+          2000
+        );
+      });
+      $(".box").hover(function () {
+        $(".box").css({
+          background: "violet",
+          fontSize: "25px",
+          fontWeight: "700",
+          borderRadius: "5px",
+        });
+      });
+    });
+  </script>
+</html>

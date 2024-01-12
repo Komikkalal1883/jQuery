@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide in jQuery</title>
+    <script src="../main/jquery-3.7.1.min.js"></script>
+    <style>
+        /* .box{
+            color:darkcyan;
+        } */
+    </style>
+</head>
+<body>
+    <div class="main"> 
+        <button class="slideUp">Slide Up</button>
+        <button class="slideToggle">Slide Toggle</button>
+        <button class="slideDown">Slide Down</button>
+    </div>
+    <div class="box">This is the Magic of jQuery.</div>
+</body>
+<script>
+    $("body").css({
+        background: "tan"
+    });
+    $("button").css({
+        height: "50px",
+        width: "150px",
+        background:"brown",
+        fontSize: "15px",
+        fontWeight: "800",
+        color: "white"
+    })
+    $(".main").css({
+        marginTop: "30px",
+        textAlign: "center",
+    });
+    $(".box").css({
+        height: "400px",
+        width: "500px",
+        border: "10px solid black",
+        textAlign: "center",
+        margin: "0 auto",
+        marginTop: "40px",
+        background: "darkcyan",
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".slideUp").click(function(){
+            $(".box").slideUp(2000)
+        });
+        $(".slideDown").click(function(){
+            $(".box").slideDown(2000)
+        });
+        $(".slideToggle").click(function(){
+            $(".box").slideToggle(2000)
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide In jQuery</title>
+  </head>
+  <body>
+    <h1>Slide In jQuery</h1>
+    <hr />
+    <button class="btnSlideUp">Slide Up</button>
+    <button class="btnSlideDown">Slide Down</button>
+    <button class="btnSlideToggle">Slide Toggle</button>
+
+    <hr />
+    <div class="box">Wanna See Some Magic In jQuery</div>
+
+    <script src="../../main/jquery-3.7.1.min.js"></script>
+    <script>
+      $("body").css({
+        backgroundColor: "tan",
+        textAlign: "center",
+      });
+      $("button").css({
+        backgroundColor: "brown",
+        color: "khaki",
+        padding: "10px 30px",
+        margin: "10px",
+      });
+      $(".box").css({
+        backgroundColor: "crimson",
+        textAlign: "center",
+        color: "khaki",
+        width: "300px",
+        height: "200px",
+        margin: "10px auto",
+        border: "5px solid blue",
+        outline: "5px dashed green",
+      });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            
+
+            // Slide Up 
+
+            $('.btnSlideUp').click(function () {
+                $('.box').slideUp(2000)
+            })
+
+            // Slide Up 
+
+            $('.btnSlideDown').click(function () {
+                $('.box').slideDown(3000)
+            })
+
+            // Slide Toggle 
+
+            $('.btnSlideToggle').click(function () {
+                $('.box').slideToggle(5000)
+            })
+
+        })
+    </script>
+  </body>
+</html>

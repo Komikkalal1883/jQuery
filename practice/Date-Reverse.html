@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Date Input</title>
+</head>
+<body>
+
+<label for="reverseDate">Select a Date:</label>
+<input onclick="addEventListener" type="date" id="reverseDate">
+
+<script>
+  const dateInput = document.getElementById('reverseDate');
+
+  dateInput.addEventListener('input', function () {
+    const selectedDate = dateInput.value;
+
+    const reversedDate = selectedDate.split('-').reverse().join('-');
+
+    dateInput.value = reversedDate;
+  });
+</script>
+
+</body>
+</html>

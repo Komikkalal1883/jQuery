@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery Ancestor Traversing</title>
+    <script src="../../main/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="great-grand-parent">great-grand-parent
+        <div class="grand-parent">grand-parent
+            <div class="parent">Parent
+                <div class="chlid">01 Child</div>
+                <div class="chlid">02 Child</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("*").css({
+        margin: "25px",
+        padding: "0",
+        boxSizing: "border-box"
+    });
+    $("body").css({
+        backgroundColor: "tan",
+        fontSize: "30px",
+        textAlign: "center"
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $(".great-grand-parent").parent().css({border: "2px solid red"});
+        $(".grand-parent").parent().css({border: "5px solid brown"});
+        $(".parent").parent().css({border: "3px solid blue"});
+        $(".chlid").parent().css({border: "2px  solid green"}); 
+    });
+</script>
+</html>

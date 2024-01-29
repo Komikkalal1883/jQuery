@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 02 jQuery Decendant Traversing</title>
+    <script src="../../main/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="great-grand-parent">
+        great-grand-parent
+        <div class="grand-parent">
+            grand-parent 
+            <div class="parent">
+                parent
+                <div class="child">Child 1</div>
+                <div class="child">Child 2</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("*").css({
+      margin: "35px",
+      padding: "0",
+      boxSizing: "border-box"
+    });
+    $("body").css({
+            backgroundColor: "tan",
+            textAlign: "center",
+            fontSize: "30px",
+            fontWieght: "1000"
+    });
+</script>
+</html>
